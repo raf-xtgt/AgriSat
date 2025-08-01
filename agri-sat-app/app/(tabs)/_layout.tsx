@@ -30,6 +30,17 @@ const TabsLayout = () => {
         }}
       />
 
+      <Tabs.Screen 
+        name='myFarm'
+        options={{
+          headerShown: false,
+          title: 'My Farm',
+          tabBarIcon: ({color}) => (
+            <Entypo name="leaf" size={24} color={color} />
+          )
+        }}
+      />
+
     </Tabs>
     </>
   )
