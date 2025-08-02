@@ -2,6 +2,9 @@ import { Stack } from "expo-router";
 import "../global.css";
 import { useFonts } from "expo-font";
 import { AgriProvider } from "../state-controller/agri-context";
+import { GestureHandlerRootView } from 'react-native-gesture-handler'; // Added this import
+import { StyleSheet } from 'react-native';
+
 
 export default function RootLayout() {
   const [fontsLoaded] = useFonts({
@@ -15,11 +18,19 @@ export default function RootLayout() {
   }
 
   return (
-    <AgriProvider>
-      <Stack>
-        <Stack.Screen name="index" options={{ headerShown: false }} />
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-      </Stack>
-    </AgriProvider>
+    <GestureHandlerRootView style={styles.container}>
+      <AgriProvider>
+        <Stack>
+          <Stack.Screen name="index" options={{ headerShown: false }} />
+          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        </Stack>
+      </AgriProvider>
+    </GestureHandlerRootView>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1, 
+  },
+});

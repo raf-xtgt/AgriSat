@@ -3,7 +3,6 @@
  */
 import { StyleSheet, Text, View } from 'react-native'
 import Entypo from '@expo/vector-icons/Entypo';
-import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 import React from 'react'
 import { Tabs } from 'expo-router'
 
