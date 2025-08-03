@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Text, View, StyleSheet, Alert } from 'react-native';
 import Entypo from '@expo/vector-icons/Entypo';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import { Pressable } from 'react-native-gesture-handler';
 import { getUserData, UserData } from '../../services/user-profile-service';
 
 
@@ -34,9 +34,9 @@ export default function Home() {
     <View style={styles.container}>
     <View style={styles.header}>
       <Text style={styles.title}>Agriculture Monitoring</Text>
-      <TouchableOpacity onPress={handleProfilePress} style={styles.profileButton}>
+      <Pressable onPress={handleProfilePress} style={styles.profileButton}>
         <Entypo name="user" size={24} color="black" />
-      </TouchableOpacity>
+      </Pressable>
     </View>
     
     <View style={styles.content}>
